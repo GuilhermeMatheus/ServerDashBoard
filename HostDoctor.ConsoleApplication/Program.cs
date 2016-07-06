@@ -1,6 +1,4 @@
-﻿using HostDoctor.Diagnostics.Exams;
-using HostDoctor.Diagnostics.Exams.Info;
-using HostDoctor.Diagnostics.Exams.Performance;
+﻿using HostDoctor.Diagnostics.Service;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,17 +13,17 @@ namespace HostDoctor.ConsoleApplication
     {
         static void Main(string[] args)
         {
-            IExam exam = new HardDriveExam();
-            while (true)
-            {
-                var arr = exam.GetResult().Information as IEnumerable;
-                Console.Clear();
+            var diagnosticsService = new DiagnosticsService();
 
-                foreach (var item in arr)
-                    Console.WriteLine(item);
-                
-                Thread.Sleep(exam.GetPreferredUpdateTime());
-            }
+            Console.WriteLine("Iniciando trabalho...");
+            diagnosticsService.Start(args);
+
+            Console.ReadLine();
+            Console.WriteLine("Parando trabalho...");
+            diagnosticsService.Stop();
+
+            Console.WriteLine("Pressione qualquer tecla para sair...");
+            Console.ReadLine();
         }
     }
 }

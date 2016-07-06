@@ -1,7 +1,9 @@
 ﻿using DashBoard.API.Hubs;
+using DashBoard.API.Model;
 using HostDoctor.Diagnostics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -11,9 +13,10 @@ namespace DashBoard.API.Controllers
 {
     public class ExamController : ApiControllerWithHub<ExamHub>
     {
-        // PUT Exam/PutResult/5
-        public void Put(ExamResult examResult)
+        [HttpPost]
+        public void Post(ExamResultModel examResult)
         {
+            Debug.WriteLine(examResult);
             Hub.Clients.All.newExamResult(examResult);
         }
     }
