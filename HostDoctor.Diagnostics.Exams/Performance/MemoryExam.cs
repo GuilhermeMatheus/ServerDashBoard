@@ -20,7 +20,7 @@ namespace HostDoctor.Diagnostics.Exams.Performance
             var available = ProcessStatusAPI.GetPhysicalAvailableMemoryInMiB();
             var totalMemory = ProcessStatusAPI.GetTotalMemoryInMiB();
 
-            return new ExamResult(new { available, totalMemory });
+            return ExamResultFactory.NativeExamResult(new { available, totalMemory });
         }
     }
 }

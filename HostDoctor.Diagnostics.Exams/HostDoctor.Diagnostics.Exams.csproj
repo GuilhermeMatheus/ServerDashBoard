@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExamResultFactory.cs" />
     <Compile Include="Info\HardDriveExam.cs" />
     <Compile Include="Info\UpTimeExam.cs" />
     <Compile Include="Performance\CpuExam.cs" />

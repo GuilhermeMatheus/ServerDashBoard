@@ -20,7 +20,7 @@ namespace HostDoctor.Diagnostics.Exams.Performance
         public ExamResult GetResult()
         {
             var cpuUsage = GetLongValue();
-            return new ExamResult(new { cpuUsage });
+            return ExamResultFactory.NativeExamResult(new { cpuUsage });
         }
     }
 }

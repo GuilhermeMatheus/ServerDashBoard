@@ -57,7 +57,7 @@ namespace HostDoctor.Diagnostics.Exams.Performance
                                 .OrderByDescending(_ => _.Usage)
                                 .ToArray();
             
-            return new ExamResult(processes);
+            return ExamResultFactory.NativeExamResult(processes);
         }
     }
 }

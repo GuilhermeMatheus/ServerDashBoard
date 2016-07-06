@@ -19,7 +19,7 @@ namespace HostDoctor.Diagnostics.Exams.Info
         public ExamResult GetResult()
         {
             var upTime = GetLongValue();
-            return new ExamResult(new { upTime });
+            return ExamResultFactory.NativeExamResult(new { upTime });
         }
     }
 }

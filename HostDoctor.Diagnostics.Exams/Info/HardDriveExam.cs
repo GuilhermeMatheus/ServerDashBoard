@@ -26,7 +26,7 @@ namespace HostDoctor.Diagnostics.Exams.Info
                                 _.AvailableFreeSpace
                             });
 
-            return new ExamResult(drives);
+            return ExamResultFactory.NativeExamResult(drives);
         }
     }
 }
