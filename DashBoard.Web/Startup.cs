@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using DashBoard.Web.Listeners;
+using Microsoft.Owin;
 using Owin;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace DashBoard.Web
         public void Configuration(IAppBuilder app)
         {
             app.MapSignalR();
+            (new ApiListener()).StartHubConnectionAsync();
         }
     }
 }

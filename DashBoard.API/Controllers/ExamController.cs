@@ -16,7 +16,7 @@ namespace DashBoard.API.Controllers
         [HttpPost]
         public void Post(ExamResultModel examResult)
         {
-            Debug.WriteLine(examResult);
+            //Debug.WriteLine(examResult);
             Hub.Clients.All.newExamResult(examResult);
         }
     }

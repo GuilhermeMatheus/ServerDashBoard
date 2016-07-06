@@ -19,7 +19,6 @@ namespace HostDoctor.Diagnostics.Service
 {
     public class DiagnosticsService : ServiceBase
     {
-        private const string ADDR = @"C:\Users\svc.sharepointcptm\Documents\visual studio 2013\Projects\HostDoctor\HostDoctor.Diagnostics.Exams\bin\Debug\HostDoctor.Diagnostics.Exams.dll";
         private DoctorNeverEndTask[] doctors;
 
         protected override void OnStart(string[] args)
@@ -34,8 +33,6 @@ namespace HostDoctor.Diagnostics.Service
 
         public void Start(string[] args)
         {
-            args = new string[] { ADDR };
-
             doctors = AssemblyLoader
                 .GetTypesInAssemblies<IExam>(args)
                 .Select(Activator.CreateInstance)
@@ -70,7 +67,6 @@ namespace HostDoctor.Diagnostics.Service
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 
                 await client.PostAsJsonAsync("api/exam", exam);
-                //.RunSynchronously();
             }
         }
     }

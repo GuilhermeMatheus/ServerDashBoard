@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using DashBoard.API.Hubs;
+using Microsoft.Owin;
 using Owin;
 using System;
 using System.Collections.Generic;
