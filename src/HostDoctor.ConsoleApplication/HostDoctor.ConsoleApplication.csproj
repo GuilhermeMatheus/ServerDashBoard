@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HostDoctor.Diagnostics.Exams\HostDoctor.Diagnostics.Exams.csproj">
+      <Project>{a59321c8-97a0-4d99-9e2f-2337af1e5d71}</Project>
+      <Name>HostDoctor.Diagnostics.Exams</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HostDoctor.Diagnostics.Service\HostDoctor.Diagnostics.Service.csproj">
       <Project>{4730e73e-7ef6-4e04-bc83-cc80201b9cd0}</Project>
       <Name>HostDoctor.Diagnostics.Service</Name>

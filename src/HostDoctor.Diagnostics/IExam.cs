@@ -8,6 +8,7 @@ namespace HostDoctor.Diagnostics
 {
     public interface IExam
     {
+        Guid GetGuid();
         TimeSpan GetPreferredUpdateTime();
         ExamResult GetResult();
     }

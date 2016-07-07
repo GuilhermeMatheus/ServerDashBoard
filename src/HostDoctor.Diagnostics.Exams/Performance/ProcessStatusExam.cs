@@ -57,7 +57,12 @@ namespace HostDoctor.Diagnostics.Exams.Performance
                                 .OrderByDescending(_ => _.Usage)
                                 .ToArray();
             
-            return ExamResultFactory.NativeExamResult(processes);
+            return this.NativeExamResult(processes);
+        }
+
+        public Guid GetGuid()
+        {
+            return new Guid("44bbd285-706c-4da4-8b12-636391904b35");
         }
     }
 }

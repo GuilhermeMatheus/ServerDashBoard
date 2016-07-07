@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HostDoctor.Diagnostics.Exams.Info
 {
-    public class UpTimeExam : PerformanceCounterWrapper, IExam 
+    public class UpTimeExam : PerformanceCounterWrapper, IExam
     {
         public UpTimeExam() : base("System", "System Up Time", null) { }
 
@@ -19,7 +19,12 @@ namespace HostDoctor.Diagnostics.Exams.Info
         public ExamResult GetResult()
         {
             var upTime = GetLongValue();
-            return ExamResultFactory.NativeExamResult(new { upTime });
+            return this.NativeExamResult(new { upTime });
+        }
+
+        public Guid GetGuid()
+        {
+            return new Guid("10348b2d-ad8d-4df5-9698-d6ca168f1e9e");
         }
     }
 }

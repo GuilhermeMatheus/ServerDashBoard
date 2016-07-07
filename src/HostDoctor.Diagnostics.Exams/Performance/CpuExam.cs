@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HostDoctor.Diagnostics.Exams.Performance
 {
-    public class CpuExam : PerformanceCounterWrapper, IExam 
+    public class CpuExam : PerformanceCounterWrapper, IExam
     {
         public CpuExam() : base("Processor", "% Processor Time", "_Total") { }
 
@@ -20,7 +20,12 @@ namespace HostDoctor.Diagnostics.Exams.Performance
         public ExamResult GetResult()
         {
             var cpuUsage = GetLongValue();
-            return ExamResultFactory.NativeExamResult(new { cpuUsage });
+            return this.NativeExamResult(new { cpuUsage });
+        }
+
+        public Guid GetGuid()
+        {
+            return new Guid("7a48ec01-1c28-402f-986f-c72dd7706c60");
         }
     }
 }

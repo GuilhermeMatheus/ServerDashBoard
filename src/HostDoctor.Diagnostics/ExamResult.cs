@@ -10,15 +10,17 @@ namespace HostDoctor.Diagnostics
 {
     public class ExamResult
     {
+        public Guid ExamTypeGuid { get; private set; }
         public string CounterName { get; private set; }
         public string MachineName { get; private set; }
         public object Information { get; private set; }
 
-        public ExamResult(object information, string counterName) :
-            this(information, counterName, Environment.MachineName) { }
+        public ExamResult(Guid examTypeGuid, object information, string counterName) :
+            this(examTypeGuid, information, counterName, Environment.MachineName) { }
 
-        public ExamResult(object information, string counterName, string machineName)
+        public ExamResult(Guid examTypeGuid, object information, string counterName, string machineName)
         {
+            ExamTypeGuid = examTypeGuid;
             CounterName = counterName;
             Information = information;
             MachineName = machineName;

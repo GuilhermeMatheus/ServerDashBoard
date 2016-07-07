@@ -31,7 +31,7 @@ namespace HostDoctor.Diagnostics.Service
             Stop();
         }
 
-        public void Start(string[] args)
+        public int Start(string[] args)
         {
             doctors = AssemblyLoader
                 .GetTypesInAssemblies<IExam>(args)
@@ -39,11 +39,12 @@ namespace HostDoctor.Diagnostics.Service
                 .Select(_ => new DoctorNeverEndTask((IExam)_))
                 .ToArray();
 
-            foreach (var doctor in doctors)
-            {
+            foreach (var doctor in doctors) {
                 doctor.AddActionBlock(GetActionsBlock());
                 doctor.StartWork();
             }
+
+            return doctors.Length;
         }
 
         private IEnumerable<ActionBlock<ExamResult>> GetActionsBlock()

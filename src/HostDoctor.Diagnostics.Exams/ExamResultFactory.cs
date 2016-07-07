@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace HostDoctor.Diagnostics.Exams
 {
-    internal class ExamResultFactory
+    internal static class ExamResultFactory
     {
-        public static ExamResult NativeExamResult(object information, [CallerFilePath] string counterFilePath = null)
+        public static ExamResult NativeExamResult(this IExam exam, object information, [CallerFilePath] string counterFilePath = null)
         {
             if (counterFilePath == null)
                 throw new ArgumentNullException("counterFilePath");
 
             var counterName = Path.GetFileNameWithoutExtension(counterFilePath);
-            return new ExamResult(information, counterName);
+            return new ExamResult(exam.GetGuid(), information, counterName);
         }
     }
 }

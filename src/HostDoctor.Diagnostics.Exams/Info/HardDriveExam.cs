@@ -26,7 +26,12 @@ namespace HostDoctor.Diagnostics.Exams.Info
                                 _.AvailableFreeSpace
                             });
 
-            return ExamResultFactory.NativeExamResult(drives);
+            return this.NativeExamResult(drives);
+        }
+
+        public Guid GetGuid()
+        {
+            return new Guid("73544715-ab3a-4662-b068-69e17396228f");
         }
     }
 }

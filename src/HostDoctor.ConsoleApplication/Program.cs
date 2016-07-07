@@ -1,4 +1,5 @@
-﻿using HostDoctor.Diagnostics.Service;
+﻿using HostDoctor.Diagnostics.Exams.Performance;
+using HostDoctor.Diagnostics.Service;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,15 +12,16 @@ namespace HostDoctor.ConsoleApplication
 {
     class Program
     {
-        private static readonly string ADDR = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\visual studio 2013\Projects\HostDoctor\HostDoctor.Diagnostics.Exams\bin\Debug\HostDoctor.Diagnostics.Exams.dll";
-        
         static void Main(string[] args)
         {
+            var addr = typeof(CpuExam).Assembly.Location;
+
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var diagnosticsService = new DiagnosticsService();
 
-            Console.WriteLine("Iniciando trabalho...");
-            diagnosticsService.Start(new string[] { ADDR });
+            Console.WriteLine("Iniciando trabalho... " + addr);
+            var workers = diagnosticsService.Start(new string[] { addr });
+            Console.WriteLine(workers + " workers");
 
             Console.ReadLine();
             Console.WriteLine("Parando trabalho...");
