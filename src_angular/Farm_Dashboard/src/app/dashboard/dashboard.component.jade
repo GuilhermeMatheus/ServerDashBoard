@@ -1,0 +1,20 @@
+//output: dashboard.component.html
+mixin makeToolbarItem(iconId)
+  .toolbar-item.center-parent
+    a.center-child.button-minor(href="#")
+      svg.icon: use(xlink:href="assets/images/icons-def.svg#" + iconId)
+
+aside.secondary-menu
+  .toolbar
+    .toolbar-container
+      +makeToolbarItem('icon-add')
+
+  nav: ul
+    li(*ngFor="let category of serversByCategories")
+      h3.category-header {{category.title}}
+      ul.category-content
+        li(*ngFor="let server of category.servers")
+          a(href="#"): span {{name}}
+          svg.icon.icon-min.icon-house: use(xlink:href="assets/images/icons-def.svg#icon-house")
+
+.component-container

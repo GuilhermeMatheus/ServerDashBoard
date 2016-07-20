@@ -1,0 +1,31 @@
+//output: index.html
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title FarmDashboard
+    base(href='/')
+    
+    {{#unless environment.production}}
+    script(src='/ember-cli-live-reload.js', type='text/javascript')
+    {{/unless}}
+    
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //Wolf by icon 54 from the Noun Project
+    link(rel='icon', type='image/png', href='favicon.png')
+  
+  body(style="margin: 0px;")
+    app-root
+      .loading-panel.
+        Loading FarmDog...
+    
+    
+    //Scripts
+    {{#each scripts.polyfills}}
+    script(src='{{.}}')
+    {{/each}}
+    
+    script.
+      System.import('system-config.js')
+            .then(function () { System.import('main'); })
+            .catch(console.error.bind(console));

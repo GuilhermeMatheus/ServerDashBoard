@@ -1,0 +1,43 @@
+$output-bourbon-deprecation-warnings: true
+
+@import "_colors.sass"
+@import "libs/bourbon/_bourbon"
+
+body
+  font-family: $helvetica
+
+a
+  color: inherit
+  fill: inherit
+
+.center-parent
+  position: relative
+
+  .center-child
+    @include position(absolute, 50% null null 50%)
+    +transform(translate(-50%,-50%))
+    text-align: center
+
+.button-major
+  font-weight: bold
+  font-size: 0.9em
+
+  &:hover
+    background: $primaryMenu-hover-Color
+    a
+      color: $primaryMenu-text-hover-Color
+      fill: $primaryMenu-text-hover-Color
+
+  &.active
+    background: $primaryMenu-activeItem-Color
+    a
+      color: white
+      fill: white
+
+.button-minor
+  fill: $primaryMenu-text-hover-Color
+  &:hover
+    background: $primaryMenu-hover-Color
+  &:active
+    color: $primaryMenu-activeItem-Color
+    fill: $primaryMenu-activeItem-Color

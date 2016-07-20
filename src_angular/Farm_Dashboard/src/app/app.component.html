@@ -1,0 +1,31 @@
+
+<div class="app-container">
+  <aside class="primary-menu">
+    <nav>
+      <ul>
+        <li class="center-parent button-major active"><a href="#" [routerLink]="['/dashboards']" routerLinkActive="active" class="center-child">
+            <svg class="icon">
+              <use xlink:href="assets/images/icons-def.svg#icon-dashboard"></use>
+            </svg><span>Dashboards</span></a></li>
+        <li class="center-parent button-major"><a href="#" [routerLink]="['/servers']" routerLinkActive="active" class="center-child">
+            <svg class="icon">
+              <use xlink:href="assets/images/icons-def.svg#icon-servers"></use>
+            </svg><span>Servers</span></a></li>
+        <li class="center-parent button-major"><a href="#" [routerLink]="['/widgets']" routerLinkActive="active" class="center-child">
+            <svg class="icon">
+              <use xlink:href="assets/images/icons-def.svg#icon-widgets"></use>
+            </svg><span>Widgets</span></a></li>
+        <li class="center-parent button-major"><a href="#" [routerLink]="['/utilities']" routerLinkActive="active" class="center-child">
+            <svg class="icon">
+              <use xlink:href="assets/images/icons-def.svg#icon-swiss-knife"></use>
+            </svg><span>Utilities</span></a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <svg class="icon icon-logo">
+        <use xlink:href="assets/images/icons-def.svg#icon-wolf">       </use>
+      </svg>
+    </div>
+  </aside>
+  <router-outlet></router-outlet>
+</div>

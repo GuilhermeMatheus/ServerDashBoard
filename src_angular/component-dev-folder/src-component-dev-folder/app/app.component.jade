@@ -1,0 +1,60 @@
+//output: app.component.html
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title FarmDashboard
+    base(href='/')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Wolf by icon 54 from the Noun Project
+    link(rel='icon', type='image/png', href='./favicon.png')
+    
+    link(rel='stylesheet', href='app/app.component.css')
+    
+  body(style='margin: 0px;')
+    
+    mixin makePrimaryListItem(title, iconId)
+      li.center-parent.button-major&attributes(attributes): a.center-child(href="#")
+        svg.icon: use(xlink:href="assets/images/icons-def.svg#" + iconId)
+        span= title
+
+    mixin makeListItem(title)
+      li&attributes(attributes)
+        a(href="#"): span= title
+        svg.icon.icon-min.icon-house: use(xlink:href="assets/images/icons-def.svg#icon-house")
+    
+    mixin makeToolbarItem(iconId)
+      .toolbar-item.center-parent
+        a.center-child.button-minor(href="#")
+          svg.icon: use(xlink:href="assets/images/icons-def.svg#" + iconId)
+      
+    .app-container
+      aside.primary-menu
+        nav: ul
+          +makePrimaryListItem('Dashboards', 'icon-dashboard')(class="active")
+          +makePrimaryListItem('Servers', 'icon-servers')
+          +makePrimaryListItem('Widgets', 'icon-widgets')
+          +makePrimaryListItem('Utilities', 'icon-swiss-knife')
+          
+        .logo
+          svg.icon.icon-logo: use(xlink:href="assets/images/icons-def.svg#icon-wolf")        
+      
+      aside.secondary-menu
+        .toolbar
+          .toolbar-container
+            +makeToolbarItem('icon-add')
+
+        nav: ul
+          li
+            h3.category-header Produção
+            ul.category-content
+              +makeListItem('Site')(class="active")
+              +makeListItem('Intranet')
+
+          li 
+            h3.category-header Homologação
+            ul.category-content
+              +makeListItem('Site')(class="home")
+              +makeListItem('Intranet')
+
+      .component-container

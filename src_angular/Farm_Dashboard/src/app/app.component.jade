@@ -1,0 +1,19 @@
+//output: app.component.html
+mixin makeBigButton(route, title, iconId)
+  li.center-parent.button-major&attributes(attributes)
+    a.center-child(href="#", [routerLink]="['/"+route+"']", routerLinkActive="active")
+      svg.icon: use(xlink:href="assets/images/icons-def.svg#" + iconId)
+      span= title
+
+.app-container
+  aside.primary-menu
+    nav: ul
+      +makeBigButton('dashboards', 'Dashboards', 'icon-dashboard')(class="active")
+      +makeBigButton('servers', 'Servers', 'icon-servers')
+      +makeBigButton('widgets', 'Widgets', 'icon-widgets')
+      +makeBigButton('utilities', 'Utilities', 'icon-swiss-knife')
+      
+    .logo
+      svg.icon.icon-logo: use(xlink:href="assets/images/icons-def.svg#icon-wolf")        
+  
+  router-outlet
