@@ -41,3 +41,148 @@ a
   &:active
     color: $primaryMenu-activeItem-Color
     fill: $primaryMenu-activeItem-Color
+
+.secondary-menu
+  background: $secondaryMenu-Color
+  z-index: 1
+  width: 170px
+  padding: 15px
+  font-weight: bold
+  font-size: 0.8em
+
+  .toolbar
+    position: absolute
+    margin: -15px -15px 0 -15px
+
+.app-container
+  width: 100%
+  height: 100%
+  position: fixed
+  display: flex
+  flex-direction: row
+
+  .icon
+    @include size(45px)
+    &.icon-min
+      @include size(13px)
+
+  .logo
+    @include position(absolute, null null 0px null)
+    @include size(100px)
+    border-top: 1px solid #393939
+    line-height: 100px
+    display: table-cell
+    text-align: center
+    background: $logo-BgColor
+    fill: white
+    .icon
+      vertical-align: middle
+
+  aside
+    margin: -3px 0
+    padding: 3px 0
+    position: relative
+
+    .toolbar
+      @include size(100% 40px)
+      border-bottom: 1px solid #393939
+      background: $secondaryMenu-activeItem-Color
+
+      .toolbar-container
+        right: 0px
+        position: absolute
+        display: flex
+        flex-direction: row
+
+      .toolbar-item, .icon
+        @include size(28px)
+      .toolbar-item
+        margin: 8px 5px
+        &:first-child
+          margin-left: 15px
+        &:last-child
+          margin-right: 15px
+
+    nav
+      color: $primaryMenu-text-Color
+      fill: $primaryMenu-text-Color
+
+      ul
+        margin: 0px
+        padding: 0px
+        list-style: none
+        li
+          position: relative
+          a
+            text-decoration: none
+
+      .category-header
+        font-size: 1.1em
+        color: white
+        margin-top: 30px
+
+      .category-content
+        margin-left: 5px
+        width: 100%
+        li
+          border-radius: 5px
+          margin: 5px 0
+          padding: 5px
+          transition: all 0.1s ease-in-out
+          *
+            vertical-align: middle
+
+          .icon-house
+            display: none
+            cursor: pointer
+
+          &:hover, &.home
+            .icon-house
+              display: inline
+
+          &.home .icon-house
+            fill: white
+
+        li:hover
+          background: lighten($secondaryMenu-activeItem-Color, 10%)
+
+        li.active
+          color: white
+          background: $secondaryMenu-activeItem-Color
+
+    &::before
+      @include position(absolute, null 0px null null)
+      content: ' '
+      height: 100%
+      right: 0px
+      background: white
+      opacity: .1
+      width: 1px
+      z-index: 9
+
+    &.primary-menu
+      position: relative
+      box-shadow: 1px 0 3px darken($secondaryMenu-Color, 5)
+      background: $primaryMenu-Color
+      z-index: 2
+      width: 100px
+
+      li
+        height: 100px
+
+    &.secondary-menu
+      background: $secondaryMenu-Color
+      z-index: 1
+      width: 170px
+      padding: 15px
+      font-weight: bold
+      font-size: 0.8em
+
+      .toolbar
+        position: absolute
+        margin: -15px -15px 0 -15px
+
+
+  .component-container
+    flex-grow: 1
+    background: $desktopColor
