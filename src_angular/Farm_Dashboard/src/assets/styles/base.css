@@ -233,6 +233,8 @@ a {
 }
 
 .app-container aside.secondary-menu {
+  height: 100%;
+  width: 170px;
   background: #282c37;
   z-index: 1;
   width: 170px;

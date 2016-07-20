@@ -8,7 +8,7 @@ mixin makeBigButton(route, title, iconId)
 .app-container
   aside.primary-menu
     nav: ul
-      +makeBigButton('dashboards', 'Dashboards', 'icon-dashboard')(class="active")
+      +makeBigButton('dashboards', 'Dashboards', 'icon-dashboard')
       +makeBigButton('servers', 'Servers', 'icon-servers')
       +makeBigButton('widgets', 'Widgets', 'icon-widgets')
       +makeBigButton('utilities', 'Utilities', 'icon-swiss-knife')
