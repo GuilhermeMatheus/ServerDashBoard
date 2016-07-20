@@ -41,7 +41,7 @@ namespace HostDoctor.Diagnostics.Exams.Wrappers
             if (_process.HasExited)
                 return -1;
 
-            short cpuCopy = _cpuUsage;
+            var cpuCopy = _cpuUsage;
             if (Interlocked.Increment(ref _runCount) == 1)
             {
                 if (!EnoughTimePassed)
