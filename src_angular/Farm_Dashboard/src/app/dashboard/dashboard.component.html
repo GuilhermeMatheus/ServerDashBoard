@@ -13,7 +13,7 @@
       <li *ngFor="let category of serversByCategories">
         <h3 class="category-header">{{category.title}}</h3>
         <ul class="category-content">
-          <li *ngFor="let server of category.servers"><a href="#"><span>{{name}}</span></a>
+          <li *ngFor="let server of category.servers"><a href="#"><span>{{server.name}}</span></a>
             <svg class="icon icon-min icon-house">
               <use xlink:href="assets/images/icons-def.svg#icon-house"></use>
             </svg>

@@ -14,7 +14,7 @@ aside.secondary-menu
       h3.category-header {{category.title}}
       ul.category-content
         li(*ngFor="let server of category.servers")
-          a(href="#"): span {{name}}
+          a(href="#"): span {{server.name}}
           svg.icon.icon-min.icon-house: use(xlink:href="assets/images/icons-def.svg#icon-house")
 
 .component-container

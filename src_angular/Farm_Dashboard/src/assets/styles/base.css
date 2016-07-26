@@ -23,6 +23,12 @@ a {
   text-align: center;
 }
 
+a.button-major {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
 .button-major {
   font-weight: bold;
   font-size: 0.9em;
@@ -39,9 +45,6 @@ a {
 
 .button-major.active {
   background: #ea5a5a;
-}
-
-.button-major.active a {
   color: white;
   fill: white;
 }

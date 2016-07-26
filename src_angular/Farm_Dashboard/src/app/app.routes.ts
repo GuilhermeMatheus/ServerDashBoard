@@ -6,7 +6,7 @@ const routes: RouterConfig = [
   {
     path: '',
     redirectTo: '/dashboards'
-    //pathMatch: ['full']
+    //,pathMatch: ['full']
   },
   {
     path: 'dashboards',

@@ -3,22 +3,30 @@
   <aside class="primary-menu">
     <nav>
       <ul>
-        <li class="center-parent button-major"><a href="#" [routerLink]="['/dashboards']" routerLinkActive="active" class="center-child">
-            <svg class="icon">
-              <use xlink:href="assets/images/icons-def.svg#icon-dashboard"></use>
-            </svg><span>Dashboards</span></a></li>
-        <li class="center-parent button-major"><a href="#" [routerLink]="['/servers']" routerLinkActive="active" class="center-child">
-            <svg class="icon">
-              <use xlink:href="assets/images/icons-def.svg#icon-servers"></use>
-            </svg><span>Servers</span></a></li>
-        <li class="center-parent button-major"><a href="#" [routerLink]="['/widgets']" routerLinkActive="active" class="center-child">
-            <svg class="icon">
-              <use xlink:href="assets/images/icons-def.svg#icon-widgets"></use>
-            </svg><span>Widgets</span></a></li>
-        <li class="center-parent button-major"><a href="#" [routerLink]="['/utilities']" routerLinkActive="active" class="center-child">
-            <svg class="icon">
-              <use xlink:href="assets/images/icons-def.svg#icon-swiss-knife"></use>
-            </svg><span>Utilities</span></a></li>
+        <li><a href="#" [routerLink]="['/dashboards']" routerLinkActive="active" class="center-parent button-major">
+            <div class="center-child">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons-def.svg#icon-dashboard"></use>
+              </svg><span>Dashboards</span>
+            </div></a></li>
+        <li><a href="#" [routerLink]="['/servers']" routerLinkActive="active" class="center-parent button-major">
+            <div class="center-child">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons-def.svg#icon-servers"></use>
+              </svg><span>Servers</span>
+            </div></a></li>
+        <li><a href="#" [routerLink]="['/widgets']" routerLinkActive="active" class="center-parent button-major">
+            <div class="center-child">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons-def.svg#icon-widgets"></use>
+              </svg><span>Widgets</span>
+            </div></a></li>
+        <li><a href="#" [routerLink]="['/utilities']" routerLinkActive="active" class="center-parent button-major">
+            <div class="center-child">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons-def.svg#icon-swiss-knife"></use>
+              </svg><span>Utilities</span>
+            </div></a></li>
       </ul>
     </nav>
     <div class="logo">
@@ -28,4 +36,10 @@
     </div>
   </aside>
   <router-outlet></router-outlet>
+  <div style="width: 100%;height: 100%" class="center-parent">
+    <pre style="color: red;text-align: left" class="center-child">~~~~~~ TODO ~~~~~~
+  +- [0] Arrumar as rotas no Angular
+  +- [0] Criar/Usar controle para Dialogs e Modais
+  `- [0] Montar tabelas no SQL</pre>
+  </div>
 </div>

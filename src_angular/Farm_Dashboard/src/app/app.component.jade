@@ -1,9 +1,10 @@
 //output: app.component.html
 mixin makeBigButton(route, title, iconId)
-  li.center-parent.button-major&attributes(attributes)
-    a.center-child(href="#", [routerLink]="['/"+route+"']", routerLinkActive="active")
-      svg.icon: use(xlink:href="assets/images/icons-def.svg#" + iconId)
-      span= title
+  li&attributes(attributes)
+    a.center-parent.button-major(href="#", [routerLink]="['/"+route+"']", routerLinkActive="active")
+      .center-child
+        svg.icon: use(xlink:href="assets/images/icons-def.svg#" + iconId)
+        span= title
 
 .app-container
   aside.primary-menu
@@ -17,3 +18,12 @@ mixin makeBigButton(route, title, iconId)
       svg.icon.icon-logo: use(xlink:href="assets/images/icons-def.svg#icon-wolf")        
   
   router-outlet
+  
+  .center-parent(style="width: 100%;height: 100%")
+    pre.center-child(style="color: red;text-align: left").
+      ~~~~~~ TODO ~~~~~~
+        +- [0] Arrumar as rotas no Angular
+        +- [0] Criar/Usar controle para Dialogs e Modais
+        `- [0] Montar tabelas no SQL
+      
+  
