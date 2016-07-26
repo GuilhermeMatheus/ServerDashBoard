@@ -6,6 +6,10 @@ export class ServersService {
 
   getServers(category: string) : Server[] {
     let servers : Server[] = [
+      { id: 0, name: 'Srv1', category: category },
+      { id: 0, name: 'Srv2', category: category },
+      { id: 0, name: 'Srv3', category: category },
+      { id: 0, name: 'Srv4', category: category }
     ];
     return servers;
   }
