@@ -53,7 +53,7 @@ namespace HostDoctor.Diagnostics.Service
             yield return new ActionBlock<ExamResult>(async _ => await NotifyDashBoardAPI(_));
         }
 
-        public void Stop()
+        public new void Stop()
         {
             foreach (var doctor in doctors)
                 doctor.StopWork();

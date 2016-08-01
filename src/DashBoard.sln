@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostDoctor.Diagnostics", "HostDoctor.Diagnostics\HostDoctor.Diagnostics.csproj", "{526300AB-3DA9-407B-A0B7-FB98FE5466DB}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostDoctor.Diagnostics.Exams", "HostDoctor.Diagnostics.Exams\HostDoctor.Diagnostics.Exams.csproj", "{A59321C8-97A0-4D99-9E2F-2337AF1E5D71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostDoctor.Diagnostics.Service", "HostDoctor.Diagnostics.Service\HostDoctor.Diagnostics.Service.csproj", "{4730E73E-7EF6-4E04-BC83-CC80201B9CD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoard.Services", "DashBoard.Services\DashBoard.Services.csproj", "{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoard.Data", "DashBoard.Data\DashBoard.Data.csproj", "{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{4730E73E-7EF6-4E04-BC83-CC80201B9CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4730E73E-7EF6-4E04-BC83-CC80201B9CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4730E73E-7EF6-4E04-BC83-CC80201B9CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +72,7 @@ Global
 		{18E6E771-70BF-4DB1-8609-F29E594183C3} = {EFFE5A3C-6A65-46BF-9A75-51B239BEE2B7}
 		{A59321C8-97A0-4D99-9E2F-2337AF1E5D71} = {CAFA8610-65E9-4C06-B574-BFF0BE031562}
 		{4730E73E-7EF6-4E04-BC83-CC80201B9CD0} = {CAFA8610-65E9-4C06-B574-BFF0BE031562}
+		{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157} = {EFFE5A3C-6A65-46BF-9A75-51B239BEE2B7}
+		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F} = {EFFE5A3C-6A65-46BF-9A75-51B239BEE2B7}
 	EndGlobalSection
 EndGlobal

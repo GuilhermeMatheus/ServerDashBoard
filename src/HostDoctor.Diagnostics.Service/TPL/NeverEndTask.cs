@@ -10,19 +10,8 @@ namespace HostDoctor.Diagnostics.Service.TPL
 {
     public abstract class NeverEndTask<TMessage>
     {
-        private readonly ActionBlock<TMessage> _action;
         private CancellationTokenSource _wToken;
         private ITargetBlock<TMessage> _task;
-
-        public NeverEndTask()
-        {
-            _action = new ActionBlock<TMessage>(message =>
-            {
-                dynamic self = this;
-                dynamic mess = message;
-                self.Handle(mess);
-            });
-        }
 
         protected abstract Task DoWorkAsync(TMessage message, CancellationToken cancellationToken);
         protected abstract TMessage Seed();

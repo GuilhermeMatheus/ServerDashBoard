@@ -1,5 +1,6 @@
-﻿using DashBoard.API.Hubs;
-using DashBoard.API.Model;
+﻿using DashBoard.API.Filters;
+using DashBoard.API.Hubs;
+using DashBoard.API.Models;
 using HostDoctor.Diagnostics;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,9 @@ namespace DashBoard.API.Controllers
 {
     public class ExamController : ApiControllerWithHub<ExamHub>
     {
-        [HttpPost]
+        [HttpPost, WellKnowMachinesFilter]
         public void Post(ExamResultModel examResult)
         {
-            //Debug.WriteLine(examResult);
             Hub.Clients.All.newExamResult(examResult);
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DashBoard.API.Model
+namespace DashBoard.API.Models
 {
     public class ExamResultModel
     {
