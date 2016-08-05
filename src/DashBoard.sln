@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoard.Services", "DashB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoard.Data", "DashBoard.Data\DashBoard.Data.csproj", "{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoard.Model", "DashBoard.Model\DashBoard.Model.csproj", "{F4C7F5F8-24FA-4861-B2E5-E483EAFB8743}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C7F5F8-24FA-4861-B2E5-E483EAFB8743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C7F5F8-24FA-4861-B2E5-E483EAFB8743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C7F5F8-24FA-4861-B2E5-E483EAFB8743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C7F5F8-24FA-4861-B2E5-E483EAFB8743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +80,6 @@ Global
 		{4730E73E-7EF6-4E04-BC83-CC80201B9CD0} = {CAFA8610-65E9-4C06-B574-BFF0BE031562}
 		{DA95FEA8-F1D6-4E88-91B2-DDFDA68CD157} = {EFFE5A3C-6A65-46BF-9A75-51B239BEE2B7}
 		{A4C29147-6E9B-42D9-91D1-C6B808A4D86F} = {EFFE5A3C-6A65-46BF-9A75-51B239BEE2B7}
+		{F4C7F5F8-24FA-4861-B2E5-E483EAFB8743} = {EFFE5A3C-6A65-46BF-9A75-51B239BEE2B7}
 	EndGlobalSection
 EndGlobal
